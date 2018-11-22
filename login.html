@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script type="text/javascript">
+function pesan(){
+	//alert('Hello World');
+	var username=document.getElementById("txtUsername").value;
+	var password=document.getElementById("txtPassword").value;
+	if (username!="" && password !="")
+		document.getElementById("form1").submit();
+	else
+		alert('Isikan username dan password');	
+}
+
+function getusername(){
+	var username=document.getElementById("txtUsername").value;	
+	document.getElementById("divusername").innerHTML=username;
+}
+</script>
+<body>
+<form id="form1" name="form1" method="post" action="ceklogin.php">
+  <table width="309" border="1">
+    <tr>
+      <td width="119">Username</td>
+      <td width="21">:</td>
+      <td width="147"><label for="txtUsername"></label>
+      <input type="text" name="txtUsername" id="txtUsername" onkeyup="getusername()" /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>:</td>
+      <td><label for="txtPassword"></label>
+      <input type="password" name="txtPassword" id="txtPassword" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><button type="button" onclick="pesan()">Submit</button>
+      <input type="reset" name="button2" id="button2" value="Reset" /></td>
+    </tr>
+  </table>
+</form>
+<div id="divusername"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
